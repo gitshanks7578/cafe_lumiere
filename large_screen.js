@@ -29,7 +29,7 @@ gsap.to(".f_image2",{
         trigger:".f_image2",
         start:"top 40%",
         end:"top 10%",
-        markers:true,
+        
         scrub:2
     }
     
@@ -43,7 +43,7 @@ gsap.to(".coffee_img img",{
         trigger:".coffee_img img",
         start:"top 40%",
         end:"top 10%",
-        markers:true,
+        
         scrub:2
     }
     
