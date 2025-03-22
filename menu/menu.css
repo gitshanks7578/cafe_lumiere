@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Jaro:opsz@6..72&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+
+    /* colors */
+    --screen-color: #000000;
+    --box-color: #441F00;
+    --text-light: white;
+    --text-dark: black;
+
+    /* sizes  */
+    --heading-size: 30px;
+    --subheading-size: 14px;
+    --para-size: 14px;
+
+    /* styles  */
+    --font-style-1: "Dancing Script";
+    --font-style-2: "poppins";
+}
+
+.hide {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--screen-color);
+    color: var(--text-light);
+    font-family: var(--font-style-2);
+}
+
+header {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 20px; */
+    gap: 20px;
+    width: 100vw;
+    height: 10rem;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    border: 1.6px solid var(--text-light);
+    border-radius: 50%;
+
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    transition: background-color 0.4s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+nav {
+    padding: 20px;
+}
+
+i {
+    color: var(--text-light);
+    font-size: 18px;
+    transition: color 0.4s;
+}
+
+.header_txt {
+    padding-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+.header_txt hr {
+    width: 0%;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent,black 90%);
+    top: 0;
+    left: 0;
+}
+.head_link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 123;
+    height: 100%;
+}
+.head_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.head_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+nav a:hover i {
+    color: var(--text-dark);
+}
+
+nav a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+#coffee_menu {
+    width: 100vw;
+    height: max-content;
+    /* background: url("../assets/circle3.svg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#burger_menu {
+    width: 100vw;
+
+    height: max-content;
+    background: url("../assets/final_menu_layer.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.coffees {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 40px;
+    gap: 40px 0px;
+}
+.coffee h3{
+    font-size: 28px;
+}
+.coffee p{
+    font-size: 20px;
+}
+#coffee_menu h1 {
+    font-weight: 500;
+    padding: 0px 60px;
+    
+}
+
+#burger_menu h1 {
+    margin-top: 40px;
+    font-weight: 600;
+    padding:  0px 60px;
+    font-size: 24px;
+
+}
+
+.coffee {
+    width: 80%;
+    height: max-content;
+    padding: 10px;
+    background-color: rgb(39, 39, 39);
+    transition: box-shadow 0.5s;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    opacity: 0;
+    will-change: opacity;
+}
+
+.coffee:hover {
+    /* box-shadow:  
+        10px 10px 0px red,   
+        -10px -10px 0px yellow;  */
+    box-shadow:
+        10px 10px 0px #62462a,
+        -10px -10px 0px #e8a461;
+
+}
+
+.burger {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgb(39, 39, 39);
+    /* background-color: rgb(128, 115, 101); */
+    transition: box-shadow 0.5s;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0;
+    will-change: opacity;
+}
+
+.burger:hover {
+    /* box-shadow:  
+        10px 10px 0px red,   
+        -10px -10px 0px yellow;  */
+        box-shadow:
+        10px 10px 0px #62462a,
+        -10px -10px 0px #e8a461;
+
+}
+
+.burger h3,
+.burger p {
+    text-align: center;
+}
+
+.cof_img {
+    width: 100%;
+    height: 10rem;
+    
+    /* margin-bottom: 10px; */
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    will-change: opacity;
+}
+
+.cof_img img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.coffee h3 {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.coffee p {
+    font-size: 14px;
+    margin: 5px 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cof_img img {
+    opacity: 0;
+
+}
+
+#footer {
+    width: 100vw;
+    height: 40vh;
+    /* background: linear-gradient(green, #ae4800); */
+
+}
+
+@media screen and (max-width:1250px) {
+    .coffees {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #coffee_menu{
+        background-size: contain;
+    }
+
+}
+@media screen and (max-width:1000px) {
+    .coffees {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+}
+@media screen and (max-width:700px) {
+    .coffees {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #coffee_menu{
+        background-size: cover;
+    }
+
+}
+@media screen and (max-width:500px) {
+    .coffees {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+}
